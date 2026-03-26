@@ -3,7 +3,7 @@ Questões resolvidas por:
 - Questão 1: Daniel
 - Questão 2: Daniel
 - Questão 3: Daniel
-- Questão 4:
+- Questão 4: Anthony
 - Questão 5:
 - Questão 6:
 - Questão 7: Daniel
