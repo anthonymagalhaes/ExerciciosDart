@@ -3,9 +3,9 @@ Questões resolvidas por:
 - Questão 1: Daniel
 - Questão 2: Daniel
 - Questão 3: Daniel
-- Questão 4:
-- Questão 5:
-- Questão 6:
+- Questão 4: Anthony
+- Questão 5: Anthony   
+- Questão 6: Anthony
 - Questão 7: Daniel
 - Questão 8:
 - Questão 9: Daniel
