@@ -7,7 +7,7 @@ Questões resolvidas por:
 - Questão 5: Anthony   
 - Questão 6: Anthony
 - Questão 7: Daniel
-- Questão 8:
+- Questão 8: Lucca
 - Questão 9: Daniel
 - Questão 10:
 - Questão 11:
