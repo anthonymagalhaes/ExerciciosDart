@@ -13,7 +13,7 @@ Questões resolvidas por:
 - Questão 11: Lucca
 - Questão 12: Daniel
 - Questão 13: Lucca
-- Questão 14:
+- Questão 14: Davi
 - Questão 15:
 - Questão 16:
 - Questão 17:
