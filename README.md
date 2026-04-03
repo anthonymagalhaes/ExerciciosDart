@@ -14,8 +14,8 @@ Questões resolvidas por:
 - Questão 12: Daniel
 - Questão 13: Lucca
 - Questão 14: Davi
-- Questão 15:
-- Questão 16:
+- Questão 15: Davi
+- Questão 16: Davi
 - Questão 17:
 - Questão 18:
 - Questão 19:
