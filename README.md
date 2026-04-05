@@ -17,6 +17,6 @@ Questões resolvidas por:
 - Questão 15: Davi
 - Questão 16: Davi
 - Questão 17: Davi
-- Questão 18:
+- Questão 18: Davi
 - Questão 19:
 - Questão 20:
