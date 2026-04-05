@@ -1,3 +1,9 @@
+/*
+14) Faça um algoritmo que leia o tamanho e os elementos de dois vetores ordenados e, em
+seguida, gere um terceiro vetor também ordenado. Obs: O usuário deverá digitar os dois
+vetores obrigatoriamente.
+ */
+
 import 'dart:io';
 
 void main(List<String> arguments) {
