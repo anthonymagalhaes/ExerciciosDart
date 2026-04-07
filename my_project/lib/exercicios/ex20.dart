@@ -1,60 +1,52 @@
 import 'dart:io';
 
+List<List<String>> mapa = [
+  ['#','#','#','#','#','#','#','#','#'],
+  ['#','E',' ',' ','#',' ',' ',' ','#'],
+  ['#','#','#',' ','#',' ','#',' ','#'],
+  ['#',' ',' ',' ',' ',' ','#',' ','#'],
+  ['#',' ','#','#','#',' ','#',' ','#'],
+  ['#',' ','#',' ',' ',' ',' ',' ','#'],
+  ['#',' ','#',' ','#','#','#','#','#'],
+  ['#',' ',' ',' ',' ',' ',' ','S','#'],
+  ['#','#','#','#','#','#','#','#','#'],
+];
+
+int linha = 1;
+int coluna = 1;
+
+void exibir() {
+  print('\x1B[2J\x1B[0;0H');
+  for (int i = 0; i < mapa.length; i++) {
+    String l = '';
+    for (int j = 0; j < mapa[i].length; j++) {
+      l += (i == linha && j == coluna) ? '@' : mapa[i][j];
+    }
+    print(l);
+  }
+}
+
 void main() {
-  List<List<String>> tab = [
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-    [' ', ' ', ' ']
-  ];
-
-  String jogador = 'X';
-  int jogadas = 0;
-
+  exibir();
   while (true) {
-    // mostra tabuleiro
-    for (int i = 0; i < 3; i++) {
-      print('${tab[i][0]} | ${tab[i][1]} | ${tab[i][2]}');
-      if (i < 2) print('---------');
-    }
+    stdout.write('Direção (W/A/S/D): ');
+    String dir = stdin.readLineSync()!.trim().toLowerCase();
+    if (dir.isEmpty) continue;
 
-    print('\nJogador $jogador');
-    stdout.write('Linha (0-2): ');
-    int l = int.parse(stdin.readLineSync()!);
+    int nl = linha, nc = coluna;
+    if (dir[0] == 'w') nl--;
+    else if (dir[0] == 's') nl++;
+    else if (dir[0] == 'a') nc--;
+    else if (dir[0] == 'd') nc++;
+    else { print('Inválido!'); continue; }
 
-    stdout.write('Coluna (0-2): ');
-    int c = int.parse(stdin.readLineSync()!);
+    if (mapa[nl][nc] == '#') { print('Parede!'); continue; }
 
-    if (tab[l][c] != ' ') {
-      print('Posição ocupada\n');
-      continue;
-    }
+    bool saida = mapa[nl][nc] == 'S';
+    linha = nl;
+    coluna = nc;
+    exibir();
 
-    tab[l][c] = jogador;
-    jogadas++;
-
-    // verifica linhas e colunas
-    bool ganhou = false;
-
-    for (int i = 0; i < 3; i++) {
-      if (tab[i][0] == jogador && tab[i][1] == jogador && tab[i][2] == jogador) ganhou = true;
-      if (tab[0][i] == jogador && tab[1][i] == jogador && tab[2][i] == jogador) ganhou = true;
-    }
-
-    // diagonais
-    if (tab[0][0] == jogador && tab[1][1] == jogador && tab[2][2] == jogador) ganhou = true;
-    if (tab[0][2] == jogador && tab[1][1] == jogador && tab[2][0] == jogador) ganhou = true;
-
-    if (ganhou) {
-      print('\nJogador $jogador venceu!');
-      break;
-    }
-
-    if (jogadas == 9) {
-      print('\nEmpate!');
-      break;
-    }
-
-    jogador = jogador == 'X' ? 'O' : 'X';
-    print('');
+    if (saida) { print('Você venceu!'); break; }
   }
 }
